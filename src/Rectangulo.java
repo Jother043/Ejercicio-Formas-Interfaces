@@ -3,9 +3,9 @@ public class Rectangulo extends Forma implements IDibujable {
     private double altura;
     private double base;
 
-    public Rectangulo(double altura, double base) {
-        this.altura = altura;
-        this.base = base;
+    public Rectangulo(double altura, double base) throws ErrorFormaException {
+        setAltura(altura);
+        setBase(base);
     }
 
     double area;
@@ -24,6 +24,14 @@ public class Rectangulo extends Forma implements IDibujable {
         this.base = base;
     }
 
+    public double getAltura() {
+        return altura;
+    }
+
+    public double getBase() {
+        return base;
+    }
+
     @Override
     public double calcularArea() {
        return area = base * altura;
@@ -31,8 +39,7 @@ public class Rectangulo extends Forma implements IDibujable {
 
     @Override
     public void dibujar() {
-        if (altura > 0 && base > 0) {
-        }
+        System.out.println("Dibujando un rectangulo con base: " + base + " y altura: " + altura);
     }
 
     @Override

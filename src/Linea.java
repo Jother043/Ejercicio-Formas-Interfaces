@@ -1,6 +1,14 @@
 public class Linea extends Forma{
 
+    private double longitud;
 
+    public Linea(double longitud) {
+        this.longitud = longitud;
+    }
+
+    public double getLongitud() {
+        return longitud;
+    }
 
     @Override
     public double calcularArea() throws ErrorFormaException {
@@ -9,6 +17,8 @@ public class Linea extends Forma{
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Linea{" +
+                "longitud=" + longitud +
+                "} " + super.toString();
     }
 }
